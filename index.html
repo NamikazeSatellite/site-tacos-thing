@@ -11,26 +11,39 @@
 </head>
 <body>
 
-   <header id="navbar">
+  <header id="navbar">
     <div class="container nav-container">
         <div class="logo">
-            <a href="#">M. Ortiz</a>
+            <a href="index.html">M. Ortiz</a>
         </div>
 
         <nav class="nav-links">
             <ul>
-                <li><a href="#hero">Home</a></li>
+                <li><a href="index.html#hero">Home</a></li>
                 <li><a href="menu.html">Our Menu</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#locations">Locations</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
-      <div class="burger-menu">
-    <a href="#hero" class="burger-link" aria-label="Return to Top">
-        <img src="https://cdn-icons-png.flaticon.com/512/3388/3388823.png" alt="Menu Icon" class="burger-icon-img">
+
+        <div class="burger-menu">
+    <a href="index.html" class="burger-link" id="burger-btn">
+        <img src="https://cdn-icons-png.freepik.com/512/12144/12144329.png" alt="Menu" class="burger-icon-img">
     </a>
 </div>
+    </div>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <button class="close-btn" id="close-btn">&times;</button>
+        
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="menu.html" class="mobile-link">Our Menu</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="index.html#locations" class="mobile-link">Locations</a></li>
+            <li><a href="index.html#contact" class="mobile-link">Contact</a></li>
+        </ul>
     </div>
 </header>
 

@@ -118,3 +118,43 @@ window.addEventListener('scroll', () => {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
+
+/* Mobile menu stuff */
+const burgerBtn = document.getElementById('burger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-btn');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+if (burgerBtn) {
+    burgerBtn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
+            e.preventDefault();
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } 
+        // Desktop Logic: If already on index.html, scroll to top instead of reloading
+        else if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        // Otherwise, let the default href="index.html" take them home
+    });
+}
+
+// Close logic remains the same
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = ''; 
+    });
+}
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
